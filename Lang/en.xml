@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<en>
+   <UserChoice.py Info="The Text from .../Function/UserChoice.py">
+       <text_1>Option 1, print available topics</text_1>
+       <text_2>Option 2, create new topics</text_2>
+       <text_3>Option [1, 2]</text_3>
+       <text_4>Sorry, this option is not available.</text_4>
+       <text_5>Option 1, crate entry</text_5>
+       <text_6>Option 2, print balance</text_6>
+       <text_7>Option 3, topic-menu</text_7>
+       <text_8>Option 4, close program</text_8>
+       <text_9>What do you want to do? [1-4]</text_9>
+   </UserChoice.py>
+   <OutputCSV.py Info="The Text from .../Function/OutputCSV.py">
+       <text_1>Based on which topic do you want your calculation?</text_1>
+       <text_2>(For all topics, let this field empty.)</text_2>
+       <text_3>From which timeperiod do you want your Blancecalculation? Please, use one of the following syntax.</text_3>
+       <text_4>| for a Year-Balance, use JJJJ</text_4>
+       <text_5>| for a Month-Balance, use JJJJMM</text_5>
+       <text_6>| for a Day-Balance, use JJJJMMDD</text_6>
+       <text_7>Date?</text_7>
+       <text_8>Sorry, your topic is not available.</text_8>
+       <text_9># helppage output
+
+Syntax: output -d date [-t topic]
+
+* -h, --help, ?     shows helppage, optional
+* -g, --guided      starts the guided-mode, optional
+-d, --date          the timeperiod of the balance-calculation please use on of the following syntax
+                        - for a Year-Balance, use JJJJ
+                        - for a Month-Balance, use JJJJMM
+                        - for a Day-Balance, use JJJJMMDD
+                        is not optional
+* -t, --topic       the topic, where based the calculation, optional
+       </text_9>
+       <text_10>Syntax error. Please use for the date only numbers.</text_10>
+       <text_11>Syntax error. Please specify a date.</text_11>
+   </OutputCSV.py>
+   <InputCSV.py Info="The Text from .../Function/InputCSV.py">
+       <text_1>Topic?</text_1>
+       <text_2>Date?</text_2>
+       <text_3>Location?</text_3>
+       <text_4>Info?</text_4>
+       <text_5>Value?</text_5>
+       <text_6>Sorry, entry can't create. Topic is not available.</text_6>
+   </InputCSV.py>
+   <Topic.py Info="The Text from .../Function/Topic.py">
+       <text_1>positive Topics</text_1>
+       <text_2>negative Topics</text_2>
+       <text_3>What is the name of the new topic?</text_3>
+       <text_4>Are the entrys of the topic positiv or negative for the wallet? [+, -] </text_4>
+       <text_5>Sorry, please use the requested syntax.</text_5>
+       <text_6>Sorry, topic is all-ready available, we can't create a duplicate.</text_6>
+   </Topic.py>
+   <SavingPlan.py Info="The Text from .../Function/SavingPlan.py">
+   </SavingPlan.py>
+</en>
