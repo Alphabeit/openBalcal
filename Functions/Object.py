@@ -14,3 +14,5 @@ class Object():   # a fit-object, for a consistent n the whole program
                 "Info": str(self.Info),
                 "Value": float(self.Value)
                 }
+
+

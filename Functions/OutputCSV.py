@@ -1,6 +1,7 @@
 from Functions import Object   # class Object, fit-form for entry
 from Functions import Lang   # text, based on language
 from Functions import Topic    # is used for the topic-based balance calculation
+from Functions import Option
 import time    # so that output-messages do not disappear immediately
 
 
@@ -54,15 +55,10 @@ def Blancecalculation(searched_date, month_range, day_range, searched_topic):
                         else:   # if date AND topic is not the same as entry
                             continue
 
-    # Funktion Option, um die Geldbezeichnung auszulesen
-    #
-    #
-    #
-    #
-    money_mark = "EUR"
+    money_mark = Option.ReadOption("customization", "currency")   # return the choices mark from the option.xml file
 
     # the "f" limits the float to two decimal places - mnemonic, f stands for formatting, float and/or fixed point
-    print(f"{total_balance:.2f}" + money_mark)   # output
+    print(f"{total_balance:.2f}" + " " + money_mark)   # output
 
 
 
@@ -114,7 +110,8 @@ def Guided_Mode():
 def Commandline(command):   # a function to read a command, like the tools under linux/unix
 
     if "-h" in command or "--help" in command or "?" in command:   # return help
-        print(Lang.Load_text("OutputCSV.py", "text_9"))
+        print(Lang.Load_text("OutputCSV.py", "text_9"))   # helppage
+        input(Lang.Load_text("OutputCSV.py", "text_10"))   # wait on input
 
     elif "-g" in command or "--guided" in command:   # start guided_mode
         Guided_Mode()
@@ -141,7 +138,7 @@ def Commandline(command):   # a function to read a command, like the tools under
                 if not paths[x+1] == str:   # checks, is the date truely an integer
                     given_date = paths[x+1]
                 else:
-                    print(Lang.Load_text("OutputCSV.py", "text_10"))
+                    print(Lang.Load_text("OutputCSV.py", "text_11"))
                     break
 
             else:
@@ -150,4 +147,4 @@ def Commandline(command):   # a function to read a command, like the tools under
         if not given_date == 11112233:   # control, that the user have specified a date
             Blancerequest(given_topic, str(given_date))   # start calculation
         else:
-            print(Lang.Load_text("OutputCSV.py", "text_11"))
+            print(Lang.Load_text("OutputCSV.py", "text_12"))
