@@ -47,7 +47,7 @@ Just try it, the program is self-explanatory.
 ## Support
 You want to support me, then take over the language packs. Text is designed so that it is not in the code, but in separate language files. You could adapt these according to your language. The original language file "en_US.xml" is felted with a bad english from me.
 
-Other wishes or comments you can send me via "Issues".
+Other wishes or comments you can send me via "Discussions".
 
 
 
