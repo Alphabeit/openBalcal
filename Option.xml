@@ -1,15 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Option>
-    <customization Info="Options that deliver the personal settings of the user. For example, presentation.">
+    <customization info="Options that deliver the personal presentation-settings of the user. For example, Language.">
         <lang>en_US</lang>
         <currency>EUR</currency>
+        <reports info="for showed Reports"
+                 syntax="we use for every single report 'topic:date' without quotation mark and split the single reports with a comma ','"
+                 example="all:Today(),all:This_Monthe()"
+                 topic_wildcards="all topics = 'all'"
+                 date_wildcards="today = 'today', yesterday = 'yesterday', this month = 'this_month', last month = 'last_month', this year = 'this_year', last year = 'last_year' / please don't use a specific date "
+        >all:today,all:this_month</reports>
     </customization>
 
-    <infobox Info="Options that decide, whether Infotext is to be displayed.">
-        <SavingPlan>True</SavingPlan>
+    <infobox info="Options that decide, whether Infotext is to be displayed.">
+
     </infobox>
 
-    <controlpanel Info="Options that decide, whether a function is enabled or disabled.">
+    <controlpanel info="Options that decide, whether a function is enabled or disabled.">
 
     </controlpanel>
 </Option>
