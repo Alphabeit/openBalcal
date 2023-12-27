@@ -1,121 +1,134 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<en>
-    <Menu.py Info="The Text from .../Function/UserChoice.py">
-        <text_0>Menu::</text_0>
-        <text_1>For help, use "help or "?"</text_1>
-        <text_2> </text_2>
-        <text_3>Helppage::
+<en openBalCal="v0.2.0">
+    <openBalcal.py Info="The Text from .../openBalcal.py" last_Update="v0.2.0">
+        <text_0>Menu:: </text_0>
+        <text_1>Welcome to Open_Balancecalculation </text_1>
+        <text_2>For help, use "help or "?" </text_2>
+    </openBalcal.py>
+
+    <Menu.py Info="The Text from .../Function/Menu.py">
+        <text_0>Menu:: </text_0>
+        <text_1>Helppage::
 Syntax: command -flags...
 
-help, ?             command, shows helppage
-input               command, create entry, use "input -h" for more infos
-output              command, give you a report about your balance, use "output -h" for more infos
-lstopic             command, list available topics, use "lstopic -h" for more infos
-mktopic             command, creates/makes new topic, use "mktopic -h" for more infos
-exit                command, leaves program
-        </text_3>
-        <text_4>Press Enter for continue...</text_4>
-        <text_5>Sorry, this option is not available.</text_5>
+help, ?                     command, shows helppage
+input                       command, create entry, use "input -h" for more infos
+output                      command, give you a report about your balance, use "output -h" for more infos
+lstopic                     command, list available topics, use "lstopic -h" for more infos
+mktopic                     command, creates/makes new topic, use "mktopic -h" for more infos
+exit                        command, leaves program </text_1>
+        <text_2>Press Enter for continue... </text_2>
+        <text_3>Sorry, this option is not available. </text_3>
     </Menu.py>
 
-    <InputCSV.py Info="The Text from .../Function/InputCSV.py">
-        <text_0>Input::</text_0>
-        <text_1>Sorry, entry can't create. Topic is not available.</text_1>
-        <text_2>Which Topic does your entry have?</text_2>
-        <text_3>On which Date its haven? Please use the syntax JJJJMMDD.</text_3>
-        <text_4>Where (Location) do you have get/lost money?</text_4>
-        <text_5>Some Infos about? Please in one string, no spaces.</text_5>
-        <text_6>About how much money (Value) are we speaking?</text_6>
-        <text_7>Helppage::
-Syntax: input -t topic -d date -l location -i info -va value
+    <InputCSV.py Info="The Text from .../Function/InputCSV.py" last_Update="v0.2.0">
+        <text_0>Input:: </text_0>
+        <text_1>Which Topic does your entry have? </text_1>
+        <text_2>On which Date its haven? Please use the syntax YYYYMMDD. Let's empty for today. </text_2>
+        <text_3>Where (Location) do you have get/lost money? </text_3>
+        <text_4>Some Infos about? Please in one string, no spaces. </text_4>
+        <text_5>About how much money (Value) are we speaking? </text_5>
+        <text_6>Helppage::
+Syntax: input -t topic [-d date] -l location -i info -va value
 
-Command, to create a entry in our database (CSV). A entry BESTEHT AUS a topic, a date, a location,
-an information and a value. Do you use the command for your first time, beginn with the guided-mode.
+Command, to create a entry in our database (CSV). An entry is made of a topic, a date, a location,
+an information and a value. Do you use the command for your first time, begin with the guided-mode.
 
-* -h, --help, ?     shows helppage, optional
-* -g, --guided      starts the guided-mode, optional
--t, --topic         the topic, to order the entry, is not optional
--d, --date          the day of the transaction,
-                        please use the syntax JJJJMMDD,
-                        is not optional
--l, --location      the location, of the transaction, is not optional
--i, --info          some info about the transaction, is not optional
--va, --value        the value about the transaction,
-                        please use the syntax 0.00 (dot-notation),
-                        is not optional
-        </text_7>
-        <text_8>Press Enter for continue...</text_8>
-        <text_9>Please use for the date only numbers.</text_9>
-        <text_10>Please specify a object behind the location flag.</text_10>
-        <text_11>Please specify a object behind the info flag.</text_11>
-        <text_12>Please use for the value only numbers and the dot-notation.</text_12>
-        <text_13>Please use every necessary flag.</text_13>
+* -h, --help, ?, help       shows helppage, is optional
+* -g, --guid, --guided      starts the guided-mode, is optional
+-t, --topic                 the topic, to order the entry, is not optional
+* -d, --date                the day of the transaction,
+                                please use the syntax YYYYMMDD,
+                                for the date of today - leave the flag off,
+                                is optional
+-l, --location, --place     the location, of the transaction, is not optional
+-i, --info, --information   some info about the transaction,
+                                please don't use blank_characters,
+                                is not optional
+-va, --value, --money       the value about the transaction,
+                                please use the syntax 0.00 (dot-notation),
+                                is not optional </text_6>
+        <text_7>Success </text_7>
    </InputCSV.py>
 
-   <OutputCSV.py Info="The Text from .../Function/OutputCSV.py">
-       <text_0>Output::</text_0>
-       <text_1>On which topic do you want, that your calculation is based?</text_1>
-       <text_2>(For all topics, let this field empty.)</text_2>
-       <text_3>From which timeperiod do you want your calculation? Please, use one of the following syntax.</text_3>
-       <text_4>| for a Year-Balance, use JJJJ</text_4>
-       <text_5>| for a Month-Balance, use JJJJMM</text_5>
-       <text_6>| for a Day-Balance, use JJJJMMDD</text_6>
-       <text_7>Date?</text_7>
-       <text_8>Sorry, your topic is not available.</text_8>
-       <text_9>Helppage::
-Syntax: output -d date [-t topic]
+   <OutputCSV.py Info="The Text from .../Function/OutputCSV.py" last_Update="v0.2.0">
+       <text_0>Output:: </text_0>
+       <text_1>On which topic do you want, that your calculation is based?
+(For all topics, let this field empty.) </text_1>
+       <text_2>From which timeperiod do you want your calculation? Please, use one of the following syntax.
+| for a Year-, Month- or Day-Balance,  use YYYY, YYYYMM or YYYYMMDD
+| you can also use the aliases "today", "yesterday", "thismonth", "lastmonth", "thisyear" and "lastyear"
+| for today, let's the field empty </text_2>
+       <text_3>Helppage::
+Syntax: output [-t topic] [-d date]
 
 Command, to create a balance-calculation. Your balance will calculated by the entries of your database
 (CSV). Please specific a timeperiod for your calculation, based by the syntax. You can also filter you
-balance on your topics, but that is optional, not nessesary. For that, specific a topic for your cal-
-culation. Do you use the command for your first time, beginn with the guided-mode.
+balance on your topics, but that is optional, not necessary. For that, specific a topic for your cal-
+culation. Do you use the command for your first time, begin with the guided-mode.
 
-* -h, --help, ?     shows helppage, optional
-* -g, --guided      starts the guided-mode, optional
--d, --date          the timeperiod of the balance-calculation please use on of the following syntax
-                        - for a Year-Balance, use JJJJ
-                        - for a Month-Balance, use JJJJMM
-                        - for a Day-Balance, use JJJJMMDD
-                        is not optional
-* -t, --topic       the topic, where based the calculation, optional
-       </text_9>
-       <text_10>Press Enter for continue...</text_10>
-       <text_11>Syntax error. Please use for the date only numbers.</text_11>
-       <text_12>Syntax error. Please specific a date.</text_12>
+* -h, --help, ?, help       shows helppage, is optional
+* -g, --guid, --guided      starts the guided-mode, is optional
+* -t, --topic               the topic, where based the calculation, is optional
+* -d, --date                the timeperiod of the balance-calculation please use on of the
+                                following syntax:
+                                - for a Year-Balance,  use YYYY
+                                - for a Month-Balance, use YYYYMM
+                                - for a Day-Balance,   use YYYYMMDD
+                                - for the date of today, leave the flag off
+                                is optional </text_3>
    </OutputCSV.py>
 
-   <Topic.py Info="The Text from .../Function/Topic.py">
-       <text_0>Topic::</text_0>
+   <Topic.py Info="The Text from .../Function/Topic.py" last_Update="v0.2.0">
+       <text_0>Topic:: </text_0>
        <text_1>Helppage::
 Syntax: lstopic
 
 Command, to list all available topics. Very simple command, does not have flags.
 
-* -h, --help, ?     shows helppage, optional
-       </text_1>
-       <text_2>Press Enter for continue...</text_2>
-       <text_3>positive Topics</text_3>
-       <text_4>negative Topics</text_4>
-       <text_5>What is the name of the new topic?</text_5>
-       <text_6>Are the entrys for the wallet topic positiv or negative? [+, -] </text_6>
-       <text_7>Sorry, topic is already available, we can't create a duplicate.</text_7>
-       <text_8>Sorry, please use the requested syntax. --> [+, -]</text_8>
-       <text_9>Helppage::
+* -h, --help, ?, help       shows helppage, is optional </text_1>
+       <text_2>positive Topics </text_2>
+       <text_3>negative Topics </text_3>
+       <text_4>What is the name of your new topic? </text_4>
+       <text_5>Are the entries for the wallet positive or negative? [+, -] </text_5>
+       <text_6>Helppage::
 Syntax: mktopic -t topic -p pole
 
 Command, to create a new topic. A topic needs a name and a pole. The pol decided if the topic have
-a positiv or a negativ value. Do you use the command for your first time, beginn with the guided-mode.
+a positive or a negative value. Do you use the command for your first time, begin with the guided-mode.
 
-* -h, --help, ?     shows helppage, optional
-* -g, --guided      starts the guided-mode, optional
--n, --name          the topic, to order the entry, is not optional
--p, --pole          the pole, decided if the entry of the topic positiv or negativ for the wallet
-                        you use "+" for positiv or "-" for negative
-                        is not optional
-       </text_9>
-       <text_10>Please use the full syntax.</text_10>
+* -h, --help, ?, help       shows helppage, is optional
+* -g, --guid, --guided      starts the guided-mode, is optional
+-n, --name, --topicname     the topic / the name, to order the entry, is not optional
+-p, --pole                  the pole, decided if the entry of the topic positive or negative
+                                for the wallet
+                                - use "+", "plus" or "add" for a positive,
+                                - or "-", "minus" or "less" for negative topic
+                                is not optional </text_6>
    </Topic.py>
 
-   <SavingPlan.py Info="The Text from .../Function/SavingPlan.py">
-   </SavingPlan.py>
+   <Reports.py Info="The Text from .../Function/Reports.py" last_Update="v0.2.0">
+       <text_0>Menu:: </text_0>
+       <text_1>Expenses of the day:: </text_1>
+       <text_2>Expenses of yesterday:: </text_2>
+       <text_3>Expenses of this Month:: </text_3>
+       <text_4>Expenses of the last month:: </text_4>
+       <text_5>Expenses of this year:: </text_5>
+       <text_6>Expenses of the last year:: </text_6>
+       <text_7>Reports:: Report/Syntax Error </text_7>
+   </Reports.py>
+
+   <Flags.py Info="The Text from .../Function/lowerFunction/Flags.py" last_Update="v0.2.0">
+       <text_0>Command:: </text_0>
+       <text_1>Flag-Error, Flag is following on a Flag </text_1>
+       <text_2>Topic-Error, Topic is not Available </text_2>
+       <text_3>Date-Syntax-Error </text_3>
+       <text_4>Date-Error </text_4>
+       <text_5>Location-Error </text_5>
+       <text_6>Info-Error </text_6>
+       <text_7>Value-Error </text_7>
+       <text_8>Name-Error, Topic is already Available </text_8>
+       <text_9>Pole-Error </text_9>
+       <text_10>Flag-Error, Flag is missing </text_10>
+   </Flags.py>
 </en>
