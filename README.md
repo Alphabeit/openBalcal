@@ -1,5 +1,5 @@
 # Open_Balancecalculation
-A Python program for your own finances.
+openBalcal, a Python program for your own finances.
 
 Most people do their accounting in tablesheets programs like Excel, if at all. It may be practical, but it could also be better. With too much time on my hands and even more interest in the Python language, this program was born. So this tool is used for cost accounting, how much money one has spent and how much is consequently still available. At the same time, the protection of your personal data is ensured, because the databases are created locally. No CLoud, but also no communication to the outside.
 
