@@ -59,10 +59,12 @@ In the upcoming version, I plan some invidual options, so thats you can decider 
 
 Furthermore, I would also like to add a savings plan. Simple calculation: salary, minus savings target, minus expected expenses, minus current expenses, equal to residual value that can be spent.
 
+Not to forget, I create some installation scripts, for Linux and Windows.
+
 
 
 ## Install
-Comming soon...
+Comming with v0.3.0.
 
 
 
