@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-cp -r openBalcal /usr/bin/
-mv /usr/bin/openBalcal/openbalcal.py /usr/bin/openbalcal
+cp -r openbalcal /usr/bin/
+mv /usr/bin/openbalcal/balcal.py /usr/bin/balcal
 
 
