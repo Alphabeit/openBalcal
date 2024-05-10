@@ -13,7 +13,7 @@ def ReadConf(grp, option):
     conf = conf_file["config"][grp][option]
 
     if "~" in conf:   # in the case of the homefolder
-        conf = conf..replace("~", homefolder)
+        conf = conf.replace("~", homefolder)
         return conf
     else:
         return conf
