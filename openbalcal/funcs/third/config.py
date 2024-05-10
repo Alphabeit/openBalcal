@@ -1,7 +1,7 @@
 from ..third import conf_template
 import yaml, os
 
-home_folder = os.path.expanduser("~")
+homefolder = os.path.expanduser("~")
 conf_path = "{}{}".format(homefolder, "/openbalcal/config.yml")
 
 
@@ -28,14 +28,17 @@ def WriteConf(grp, option, new_value):
 def ProvideFiles():
 
     def providefile(file):
-        if not os.path.exists("{}{}".format(homefolder, "~/openbalcal"):
-            os.mkdir("{}{}".format(homefolder, "~/openbalcal"):
+        if not os.path.exists("{}{}".format(homefolder, "/openbalcal")):
+            os.mkdir("{}{}".format(homefolder, "/openbalcal"))
         if not os.path.exists(file):
             os.mknod(file)
 
-    providefile(conf_path)  # config file
-    providefile(ReadConf("paths", "topics"))  # topic db
-    providefile(ReadConf("paths", "database"))  # main db
+    def providefile_config():
+        providefile(conf_path)  # config file
+
+    def proviefile_dbs():
+        providefile(ReadConf("paths", "topics"))  # topic db
+        providefile(ReadConf("paths", "database"))  # main db
 
 
 
