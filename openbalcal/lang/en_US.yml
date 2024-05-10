@@ -1,0 +1,140 @@
+version: v0.3.0
+language: en
+country: US
+file:
+
+  menu_cli:
+    0: "Menu:: "
+    1: "Welcome to Open_Balancecalculation"
+    2: "For help, use 'help' or '?'"
+    3: "Sorry, this option is not available. "
+    help: "Helppage:: \n
+Syntax: command -flags... \n
+ \n
+help, ?                     command, shows helppage \n
+input                       command, create entry, use 'input -h' for more infos \n
+output                      command, give you a report about your balance, use 'output -h' for more infos \n
+search                      command, print your entry based on your search/filters, use search -h for more infos \n
+lstopic                     command, list available topics, use 'lstopic -h' for more infos \n
+mktopic                     command, creates/makes new topic, use 'mktopic -h' for more infos \n
+exit                        command, leaves program "
+
+  inputt:
+    0: "Input:: "
+    help: "Helppage:: \n
+Syntax: input -t topic [-d date] -l location -i info -va value \n
+ \n
+Command, to create a entry in our database (CSV). An entry is made of a topic, a date, a location, \n
+an information and a value. \n
+ \n
+* -h, --help, ?, help       shows helppage, is optional \n
+-t, --topic                 the topic, to order the entry, is not optional \n
+* -d, --date                the day of the transaction, \n
+\t                            please use the syntax YYYYMMDD, \n
+\t                            for the date of today - leave the flag off, \n
+\t                            is optional \n
+-l, --location, --place     the location, of the transaction, is not optional \n
+-i, --info, --information   some info about the transaction, \n
+\t                            please don't use blank_characters, \n
+\t                            is not optional \n
+-va, --value, --money       the value about the transaction, \n
+\t                            please use the syntax 0.00 (dot-notation), \n
+\t                            is not optional"
+
+  output:
+    0: "Output:: "
+    help: "Helppage:: \n
+Syntax: output [-t topic] [-d date] \n
+
+Command, to create a balance-calculation. Your balance will calculated by the entries of your database \n
+(CSV). Please specific a timeperiod for your calculation, based by the syntax. You can also filter you \n
+balance on your topics, but that is optional, not necessary. For that, specific a topic for your cal- \n
+culation. \n
+ \n
+* -h, --help, ?, help       shows helppage, is optional \n
+* -t, --topic               the topic, where based the calculation, is optional \n
+* -d, --date                the timeperiod of the balance-calculation please use on of the \n
+\t                            following syntax: \n
+\t                            - for a Year-Balance,  use YYYY \n
+\t                            - for a Month-Balance, use YYYYMM \n
+\t                            - for a Day-Balance,   use YYYYMMDD \n
+\t                            - for the date of today, leave the flag off \n
+\t                            is optional "
+
+  search:
+    0: "Search:: "
+    help: "Helppage:: \n
+Syntax: search [-t topic] [-d date] [-l location] [-i info] [-va value] \n
+ \n
+Command, to search entry from your database, based on the information, do you give. Every field is a \n
+filter - If you leave a filed empty, the point will not be filtered. For location and info, you can \n
+use wildcards. Please see below. \n
+\n
+* -h, --help, ?, help       shows helppage, is optional \n
+* -t, --topic               the topic, to order the entry, is optional \n
+* -d, --date                the day of the transaction, \n
+\t                            please use the syntax YYYYMMDD, \n
+\t                            if you leave the flag off, the command take the date of today \n
+\t                            is optional \n
+* -l, --location, --place   the location, of the transaction, \n
+\t                            if you want, that your filter match with everything, what \n
+\t                            your search include - like 'Cologne' in 'CologneEst' and \n
+\t                            'CologneSouth', so include a star '*' as wildcard \n
+\t                            is optional \n
+* -i, --info, --information some info about the transaction, \n
+\t                            please don't use blank_characters, \n
+\t                            same as location, if you want to use the wildcard, \n
+\t                            so include a star '*' as wildcard \n
+\t                            is optional \n
+-va, --value, --money       the value about the transaction, \n
+\t                            please use the syntax 0.00 (dot-notation), \n
+\t                            is not optional"
+
+  topic:
+    0: "Topic:: "
+    1: "positive Topics "
+    2: "negative Topics "
+    help: "Helppage:: \n
+Syntax: lstopic \n
+ \n
+Command, to list all available topics. Very simple command, does not have flags. \n
+ \n
+* -h, --help, ?, help       shows helppage, is optional"
+    help2: "Helppage:: \n
+Syntax: mktopic -n name -p pole \n
+ \n
+Command, to create a new topic. A topic needs a name and a pole. The pol decided if the topic have \n
+a positive or a negative value. \n
+ \n
+* -h, --help, ?, help       shows helppage, is optional \n
+-n, --name, --topicname     the topic / the name, to order the entry, is not optional \n
+-p, --pole                  the pole, decided if the entry of the topic positive or negative \n
+\t                            for the wallet \n
+\t                            - use '+', 'plus' or 'add' for a positive, \n
+\t                            - or '-', 'minus' or 'less' for negative topic \n
+\t                            is not optional"
+
+  report:
+    0: "Menu:: "
+    1: "Expenses of the day:: "
+    2: "Expenses of yesterday:: "
+    3: "Expenses of this Month:: "
+    4: "Expenses of the last month:: "
+    5: "Expenses of this year:: "
+    6: "Expenses of the last year:: "
+    7: "Reports:: Report/Syntax Error "
+
+  flags:
+    0: "Command:: "
+    1: "Flag-Error, Flag is following on another Flag "
+    2: "Topic-Error, Topic is not Available "
+    3: "Date-Number-Error "
+    4: "Date-Synonym-Error "
+    5: "Date-Error "
+    6: "Location-Error "
+    7: "Info-Error "
+    8: "Value-Error "
+    9: "Name-Error, Topic is already Available "
+    10: "Pole-Error "
+    11: "Unknown-Error "
+    12: "Flag-Error, Flag is missing "
