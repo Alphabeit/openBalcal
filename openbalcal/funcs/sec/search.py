@@ -62,7 +62,7 @@ def PrintEntrys(topic, date, location, info, value):
                     success.append(False)   # if we want a search "that your value include", we need to look that your search is in the line
                                             # the result, my example will match both for "Cologne*", "Est*", "Edeka*" or "CologneEst*"
             if "l" in paths:                # for the program, to start the wildcard, include a "*"
-                if values[2] in location:
+                if values[2] == location:
                     success.append(True)
                 else:
                     success.append(False)
@@ -74,7 +74,7 @@ def PrintEntrys(topic, date, location, info, value):
                     success.append(False)
 
             if "i" in paths:
-                if values[3] in info:
+                if values[3] == info:
                     success.append(True)
                 else:
                     success.append(False)
