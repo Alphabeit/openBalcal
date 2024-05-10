@@ -25,20 +25,19 @@ def WriteConf(grp, option, new_value):
 
 
 
-def ProvideFiles():
+def ProvideFiles(files):
 
-    def providefile(file):
-        if not os.path.exists("{}{}".format(homefolder, "/openbalcal")):
-            os.mkdir("{}{}".format(homefolder, "/openbalcal"))
-        if not os.path.exists(file):
-            os.mknod(file)
+    if not os.path.exists("{}{}".format(homefolder, "/openbalcal")):
+        os.mkdir("{}{}".format(homefolder, "/openbalcal"))
+    if not os.path.exists(file):
+        os.mknod(file)
 
-    def providefile_config():
-        providefile(conf_path)  # config file
+def ProvideFiles_Config():
+    ProvideFiles(conf_path)  # config file
 
-    def proviefile_dbs():
-        providefile(ReadConf("paths", "topics"))  # topic db
-        providefile(ReadConf("paths", "database"))  # main db
+def ProvideFiles_DBs():
+    ProvideFiles(ReadConf("paths", "topics"))  # topic db
+    ProvideFiles(ReadConf("paths", "database"))  # main db
 
 
 
