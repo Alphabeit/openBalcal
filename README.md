@@ -64,9 +64,11 @@ Not to forget, I create some installation scripts, for Linux and Windows.
 
 
 ## Install
-```sudo git clone https://github.com/Alphabeit/Open_Balancecalculation.git
+```
+sudo git clone https://github.com/Alphabeit/Open_Balancecalculation.git
 cd Open_Balancecalculation
-sudo bash install.sh```
+sudo bash install.sh
+```
 
 
 
