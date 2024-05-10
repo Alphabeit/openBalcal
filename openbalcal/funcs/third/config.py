@@ -46,7 +46,7 @@ def UpdateOption():
         conf_exist = yaml.safe_load(file)
 
     if conf_exist == None:
-        conf_exist = 000
+        ver_exist = "000"
     else:
         ver_exist = conf_exist["version"].replace("v", "").replace(".", "")
     
@@ -54,6 +54,14 @@ def UpdateOption():
 
     if ver_exist >= ver_template:   # if existing verion of config higher or same as template
         pass  # nothing to do, config file is fine
+    
+    elif ver_exist == "000":   # there is no existing config, we need to create a new one
+        conf_tem = conf_template.Template()   # load template as str
+        conf_tem = yaml.safe_load(conf_tem)   # change str to yaml
+        
+        with open(conf_path, "w") as file:
+            yaml.safe_dump(conf_tem, file)
+    
     else:
         conf_tem = conf_template.Template()   # load template as str
         conf_tem = yaml.safe_load(conf_tem)   # change str to yaml
