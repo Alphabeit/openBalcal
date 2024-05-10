@@ -1,7 +1,8 @@
 from ..third import conf_template
 import yaml, os
 
-conf_path = "~/openbalcal/config.yml"
+home_folder = os.path.expanduser("~")
+conf_path = "{}{}".format(homefolder, "/openbalcal/config.yml")
 
 
 
@@ -27,8 +28,8 @@ def WriteConf(grp, option, new_value):
 def ProvideFiles():
 
     def providefile(file):
-        if not os.path.exists("~/openbalcal"):
-            os.mkdir("~/openbalcal")
+        if not os.path.exists("{}{}".format(homefolder, "~/openbalcal"):
+            os.mkdir("{}{}".format(homefolder, "~/openbalcal"):
         if not os.path.exists(file):
             os.mknod(file)
 
