@@ -7,8 +7,8 @@ def Template():
     template = ('''version: v0.3.0
 config:
   paths:
-    database: /etc/openbalcal/database.csv
-    topics: /etc/openbalcal/topics.csv
+    database: ~/openbalcal/database.csv
+    topics: ~/openbalcal/topics.csv
     
   country:
     currency: DOLLAR
