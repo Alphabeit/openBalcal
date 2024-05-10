@@ -6,7 +6,8 @@
 from openbalcal.funcs.main import menu_cli
 from openbalcal.funcs.third import config
 
-config.ProvideFiles()
+config.ProvideFiles.providefile_config()
 config.UpdateOption()
+config.ProvideFiles.providefile_dbs()
 
 menu_cli.CLI()
