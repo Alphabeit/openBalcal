@@ -25,7 +25,7 @@ def WriteConf(grp, option, new_value):
 
 
 
-def ProvideFiles(files):
+def ProvideFiles(file):
 
     if not os.path.exists("{}{}".format(homefolder, "/openbalcal")):
         os.mkdir("{}{}".format(homefolder, "/openbalcal"))
