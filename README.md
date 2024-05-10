@@ -64,7 +64,9 @@ Not to forget, I create some installation scripts, for Linux and Windows.
 
 
 ## Install
-Comming with v0.3.0.
+```sudo git clone https://github.com/Alphabeit/Open_Balancecalculation.git
+cd Open_Balancecalculation
+sudo bash install.sh```
 
 
 
