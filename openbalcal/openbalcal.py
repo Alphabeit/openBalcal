@@ -3,8 +3,8 @@
  # v0.3.0
  # last Update: 20240510
 
-from funcs.main import menu_cli
-from funcs.third import config
+from openbalcal.funcs.main import menu_cli
+from openbalcal.funcs.third import config
 
 config.ProvideFiles()
 config.UpdateOption()
