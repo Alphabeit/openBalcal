@@ -1,7 +1,7 @@
 from ..third import conf_template
 import yaml, os
 
-conf_path = "/Doc/Documents_Alpha/Informatik/Programme/openBalcal/20240328_openBalcal/0etc/openbalcal/config.yml"
+conf_path = "/etc/openbalcal/config.yml"
 
 
 
