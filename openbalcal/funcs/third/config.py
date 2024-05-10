@@ -10,8 +10,13 @@ def ReadConf(grp, option):
     with open(conf_path, "r") as file:
         conf_file = yaml.safe_load(file)
 
-    return conf_file["config"][grp][option]
+    conf = conf_file["config"][grp][option]
 
+    if "~" in conf:   # in the case of the homefolder
+        conf = conf..replace("~", homefolder)
+        return conf
+    else:
+        return conf
 
 
 def WriteConf(grp, option, new_value):
