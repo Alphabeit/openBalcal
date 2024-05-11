@@ -18,7 +18,7 @@ def Calculation(topic, date):
                 values = line.split(";")
 
                 if values[1] in dates:
-                    print(str(values[1] + dates)   ### TEST
+                    print(str(values[1]) + str(dates))   ### TEST
                     total += float(values[4])
                 else:
                     continue
