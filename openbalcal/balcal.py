@@ -1,7 +1,7 @@
 #!/usr/bin/python3
  # Creator: Christopher / Alphabeit
- # v0.3.0
- # last Update: 20240510
+ # v0.3.1
+ # last Update: 20240511
 
 from openbalcal.funcs.main import menu_cli
 from openbalcal.funcs.third import config
