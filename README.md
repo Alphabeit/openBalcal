@@ -1,7 +1,7 @@
 # Open_Balancecalculation
 openBalcal, a Python program for your own finances.
 
-Most people do their accounting in tablesheets programs like Excel, if at all. It may be practical, but it could also be better. With too much time on my hands and even more interest in the Python language, this program was born. So this tool is used for cost accounting, how much money one has spent and how much is consequently still available. At the same time, the protection of your personal data is ensured, because the databases are created locally. No CLoud, but also no communication to the outside.
+Most people do their accounting in tablesheets programs like Excel, if at all. It may be practical, but it could also be better. With too much time on my hands and even more interest in the Python language, this program was born. This tool is used for cost accounting, how much money one has spent and how much is consequently still available. The databases is created locally - no Cloud, no communication to the outside.
 
 
 
@@ -10,70 +10,57 @@ Each digit in the version number represents a development status.
 
 The last digit is incremented for bug fixes - means bugs were fixed but program was not extended. The second digit represents function updates. New functions, or new features that extend the program as such. Allows also new bugs. ;) The foremost digit represents the major version. When this is superscripted, we are talking about a major program change. For example, the addition of a GUI. "Don't ask me when this is coming". 
 
-A major update could also change the program so much that the database from the previous versions is no longer compatible. In this case I would provide a function to adapt the database for the current version.
-
-For the update histroy, look under "Info", in the file "Updatehistory.md".
+For the update histroy, look the file "Updatehistory.md".
 
 
 
 #### newest Verison
-v0.2.0
-
-Okay, start we with the changes for the userside. 
-
-- At first, we have include some date functions. 
-So, you can call as example the curentlly month also with "this_month", instead of the YYYYMMDD Syntax.
-Also, if you didn't deciede a specific date, it will be today, automatic. 
-
-- Next, it was included a Report Function.
-So with every program start, the program shows you the balance of today and this_month.
-Maybe the fastest way to know your balance.
-In the future, you should decide by you own, with topics and time periods are showed with the reports.
-
-But how does its look for the developers and this someone, how are interested in the code?
-
-- At first, I have pull some functions in the folder "lowerfunction". 
-There are scripts, where the user not didn't work directly.
-As example, the "lowerfunctions" are called by the "functions" and there are called by the "main script".
-
-- At next, I have included a flag function-script. 
-So the commands are not written by this own anymore, instead now, every command is built by the flag functions.
-The result, the "function" scripts a smaller and the command structure is uniform.
-Not to forget, for the future is much more easier to write new commands.
-
-- Also, I have change a little bit the lang-file. 
-Duplicates are removed and error message are include.
-I even include some information about the last change, so when someone would translate the lang files and a new update is coming, he could see, what he needs to change and what can be stay the same.
-
-- Last but not least, the program gets an alias. 
-Open_Balancecalculation is the name of this program and this will stay.
-But for a search over google or a call over the command line, its to long.
-So I present the alias "openBalcal", for OPEN_BALalnceCALculation.
-
-I wish you a good start in the coming year.
-
-#### planed, next comming Version
 v0.3.0
 
-In the upcoming version, I plan some invidual options, so thats you can decider more, what you see and whta not.
+- At first, I have write the programm from brand new. The language and config file are now `.yaml`, not `.xml` any more. The code is more clean and should be faster.
 
-Furthermore, I would also like to add a savings plan. Simple calculation: salary, minus savings target, minus expected expenses, minus current expenses, equal to residual value that can be spent.
+- Next, the program can now be installed und upgraded. See a step below at "Install & Upgrade". The installation is Linux only. The code will placed in `/usr/bin` and the database in your homedirectory `~/openbalcal`. If you want to upgrade the code, you can easy use the installprocess again. The code will be overwrite, the database not.
 
-Not to forget, I create some installation scripts, for Linux and Windows.
+- The programm is under Linux now avalibale as command. So you dont need to go in a spezific folder anymore, or start explizit the script. Just enter `balcal` in terminal and here we go.
+
+- At least, a `search` function have found this way in the tool. So you can filter your entrys based on some search criteria.
+
+For the case, you have used the version v0.2.0 or older, you need the copy your database from the old folder, in the new folder inside your homedirectory.
 
 
 
-## Install
+#### planed, next comming Version
+v0.4.0
+
+It sould be possible to delete old entrys. To explicitly select entrys, I need to include Entry-IDs. Be prepared to reload the database, but I also write some code vor this.
+
+I also should write a manuel. Its in process... 
+
+Last but not least, I want to include some Self-entering values. Entrys like Apartment-Rent or the Netflix-Abo, thats they include every month again himself. 
+
+
+
+## Install & Upgrade
+For install, you the following 3 commands. For upgrade, use this too.
+
 ```
 sudo git clone https://github.com/Alphabeit/Open_Balancecalculation.git
 cd Open_Balancecalculation
 sudo bash install.sh
 ```
 
+The program is splitet in two parts, the code and the databases. The code will be install from here, resp. overwritten during an update. The database will be created by the code, as long no database exsist. So if you upgrade the program, it will regnorice the database and continue to use.
+
+
+
+## First Steps
+
+After the programm is installed, just enter `balcal` in the Terminal. balcal is a Sydonym for BALanceCALculation.
+
 
 
 ## Manuel
-At the current time, this is a terminal-only program. Hardcore Linux users are probably already starting to drool. For the manual, start the program and use the command "help", or the corresponding command including the flag "-h", "--help" or "? 
+At the current time, this is a terminal-only program. Hardcore Linux users are probably already starting to drool. For the manual, start the program and use the command `help`, or the corresponding command including the flag `-h`, `--help` or `?`.  
 
 Just try it, the program is self-explanatory. 
 
@@ -87,4 +74,4 @@ Other wishes or comments you can send me via "Discussions".
 
 
 ## License
-This project is licensed under the GPL-3.0 License.
+This project is licensed under the GPL-3.0 License. You can use it for free.
