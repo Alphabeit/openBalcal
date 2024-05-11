@@ -45,7 +45,7 @@ For install, you the following 3 commands. For upgrade, use this too.
 
 ```
 sudo git clone https://github.com/Alphabeit/openBalcal.git
-cd Open_Balancecalculation
+cd openBalcal
 sudo bash install.sh
 ```
 
