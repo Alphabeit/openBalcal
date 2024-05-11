@@ -38,6 +38,7 @@ def DateGenerator(date):
     # end
     # -------------------------------------- #
 
+    print(dates)   ### TEST 
     return dates
 
 
