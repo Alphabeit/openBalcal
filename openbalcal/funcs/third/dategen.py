@@ -26,7 +26,7 @@ def DateGenerator(date):
 
         for y in range(0, 32):
             if len(str(y)) == 1:
-                x = "0{}".format(y)
+                y = "0{}".format(y)
 
             dates.append("{}{}".format(date, y))
 
@@ -37,7 +37,7 @@ def DateGenerator(date):
 
     # end
     # -------------------------------------- #
-
+    
     return dates
 
 

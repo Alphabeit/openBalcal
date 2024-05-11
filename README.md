@@ -1,5 +1,5 @@
 # openBalcal
-openBalcal, shourtform for Open_Balancecalculation, a Python program for your own finances.
+Shortform for Open_Balancecalculation, a Python program for your own finances.
 
 Most people do their accounting in tablesheets programs like Excel, if at all. It may be practical, but it could also be better. With too much time on my hands and even more interest in the Python language, this program was born. This tool is used for cost accounting, how much money one has spent and how much is consequently still available. The databases is created locally - no Cloud, no communication to the outside.
 
@@ -25,7 +25,7 @@ v0.3.0
 
 - At least, a `search` function have found this way in the tool. So you can filter your entrys based on some search criteria.
 
-For the case, you have used the version v0.2.0 or older, you need the copy your database from the old folder, in the new folder inside your homedirectory.
+For the case, you have used the version v0.2.0 or older, you need the copy your databases from the old folder, in the new folder inside your homedirectory. -> `database.csv` and -> `topic.csv`
 
 
 
