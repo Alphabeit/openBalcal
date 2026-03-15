@@ -1,10 +1,10 @@
 def Version():
-    return "v0.3.0"
+    return "v0.3.1"
 
 
 
 def Template():
-    template = ('''version: v0.3.0
+    template = ('''version: v0.3.1
 config:
   paths:
     database: ~/openbalcal/database.csv
@@ -12,7 +12,7 @@ config:
     
   country:
     currency: DOLLAR
-    lang: /bin/openbalcal/lang/en_US.yml
+    lang: /usr/bin/openbalcal/lang/en_US.yml
   
   funcs:
     report: all:today,all:this_month''')
